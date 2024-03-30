@@ -35,7 +35,7 @@ using System.Runtime.CompilerServices;
 
 PrintAsync().Wait();
 
-static async Task PrintAsync()
+static async MyTask PrintAsync()
 {
     for (int i = 0; ; i++)
     {
@@ -44,6 +44,7 @@ static async Task PrintAsync()
     }
 }
 
+[AsyncMethodBuilder(typeof(MyTaskMethodBuilder))]
 class MyTask
 {
     private bool _completed;
